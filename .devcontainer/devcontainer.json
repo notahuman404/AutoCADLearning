@@ -1,33 +1,10 @@
 {
   "name": "KiCad Development Environment",
-  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu-22.04",
   "features": {
-    "ghcr.io/devcontainers/features/desktop-lite:1": {
-      "version": "latest"{
-  "name": "KiCad Development Environment",
-  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
-  "features": {
-    "ghcr.io/devcontainers/features/desktop-lite:1": {
-      "version": "latest"
-    }
+    "ghcr.io/devcontainers/features/desktop-lite:1": {}
   },
-  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y software-properties-common && sudo add-apt-repository -y ppa:kicad/kicad-10.0-releases && sudo apt-get update && sudo apt-get install -y kicad kicad-common kicad-libraries kicad-symbols kicad-footprints kicad-packages3d kicad-templates",
-  "customizations": {
-    "vscode": {
-      "extensions": ["danielmeza/kicad-syntax-vscode"]
-    }
-  },
-  "forwardPorts": [6080],
-  "portsAttributes": {
-    "6080": {
-      "label": "KiCad Desktop GUI",
-      "onAutoForward": "openBrowser"
-    }
-  }
-}
-    }
-  },
-  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y software-properties-common && sudo add-apt-repository -y ppa:kicad/kicad-10.0-releases && sudo apt-get update && sudo apt-get install -y --no-install-recommends kicad",
+  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y software-properties-common && sudo add-apt-repository -y ppa:kicad/kicad-10.0-releases && sudo apt-get update && sudo apt-get install -y kicad kicad-libraries kicad-symbols kicad-footprints kicad-packages3d kicad-templates",
   "customizations": {
     "vscode": {
       "extensions": ["danielmeza/kicad-syntax-vscode"]
