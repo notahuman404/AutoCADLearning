@@ -6,4 +6,5 @@
 "SW2","1","SW_Push","Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB","Cherry MX-compatible 1U momentary switch"
 "U1","1","DHT11","Sensor:Aosong_DHT11_5.5x12.0_P2.54mm","DHT11 temperature/humidity sensor"
 "U2","1","XIAO-ESP32-C3-SMD","Imported Parts:XIAO-ESP32-C6-DIP","Seeed Studio XIAO ESP32-C3 controller module"
-"MPU6050","1","MPU6050","External module; connects through J2 (1x08)","Provides knowledge of movement"
+"MPU6050","1","MPU6050","External module; connects through J2 (1x08)","Six-axis accelerometer/gyroscope module for tilt and shake sensing"
+"PCB1","1","Custom PCB","N/A (bare PCB)","Bare PCB fabricated from current KiCad board; Gerber files: Gerber-Files.zip"
