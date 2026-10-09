@@ -29,13 +29,13 @@ Starbie is a small motion-controlled digital pet built around a Seeed Studio XIA
 | --- | --- |
 | Seeed Studio XIAO ESP32-C3 | Controller and firmware target |
 | 0.96-inch 128×64 I²C OLED, SSD1306-compatible | Pet display |
-| MPU6050 / GY-521 module | Tilt and shake sensing |
+| MPU6050 module (external via J2) | Tilt and shake sensing |
 | DHT11 | Optional temperature and humidity sensing |
 | 2 Cherry MX-compatible 1U switches | Menu/action and stats controls |
 | 10 kΩ through-hole resistor | Listed as R1 in the schematic |
 | Custom PCB | KiCad design in the starbie directory |
 
-See BOM.csv for the current parts list. The schematic shows the MPU6050 connection through J2, a generic 1x08 connector: pins 1-4 carry +3.3V, GND, SCL, and SDA. BOM.csv lists the MPU6050/GY-521 breakout separately from the board-mounted J2 header because the exact module part number is not specified.
+See BOM.csv for the current parts list. The guide pairs the XIAO ESP32-C3 symbol with the custom footprint ID `Imported Parts:XIAO-ESP32-C6-DIP`; the BOM preserves that assignment. The guide represents the MPU6050 module with a generic 1x08 connector: J2 is the board-mounted header and pins 1-4 carry +3.3V, GND, SCL, and SDA. The guide does not specify a particular breakout-board variant, so the BOM names it as an MPU6050 module connected via J2.
 
 ## Wiring
 
