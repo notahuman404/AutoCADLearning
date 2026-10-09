@@ -35,7 +35,7 @@ Starbie is a small motion-controlled digital pet built around a Seeed Studio XIA
 | 10 kΩ through-hole resistor | Listed as R1 in the schematic |
 | Custom PCB | KiCad design in the starbie directory |
 
-See BOM.csv for the current parts list. The schematic does not name the MPU6050 as a component; the CSV calls it out as an additional module required by the firmware.
+See BOM.csv for the current parts list. The schematic shows the MPU6050 connection through J2, a generic 1x08 connector: pins 1-4 carry +3.3V, GND, SCL, and SDA. BOM.csv lists the MPU6050/GY-521 breakout separately from the board-mounted J2 header because the exact module part number is not specified.
 
 ## Wiring
 
