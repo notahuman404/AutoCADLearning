@@ -4,13 +4,16 @@ Starbie is a small motion-controlled digital pet built around a Seeed Studio XIA
 
 ## Project images
 
-![Starbie concept render](assests/ConceptRender.png)
-
-![Starbie 3D render](assests/3dRender.png)
-
-![PCB layout](assests/PCB.png)
-
-![Schematic](assests/Schematic.png)
+<table>
+  <tr>
+    <td align="center"><strong>Concept render</strong><br><img src="assests/ConceptRender.png" alt="Starbie concept render" width="420"></td>
+    <td align="center"><strong>3D PCB render</strong><br><img src="assests/3dRender.png" alt="Starbie PCB 3D render" width="420"></td>
+  </tr>
+  <tr>
+    <td align="center"><strong>PCB layout</strong><br><img src="assests/PCB.png" alt="KiCad PCB layout" width="420"></td>
+    <td align="center"><strong>Schematic</strong><br><img src="assests/Schematic.png" alt="KiCad schematic" width="420"></td>
+  </tr>
+</table>
 
 ## Features
 
@@ -58,14 +61,6 @@ Connect module power and ground according to the module labels and the schematic
 4. Open Firmware/Starbie/Starbie.ino, check the beginner settings and pin assignments, then upload to the XIAO ESP32-C3.
 
 Button 1 opens the four-way menu. Tilt toward top for NAP, right for PLAY, bottom for FEED, or left for PET; press Button 1 again to confirm. Button 2 toggles stats. Shaking Starbie gives it a reaction and wakes it from a nap. The DHT11 can be disabled with USE_DHT11 if that sensor is not installed.
-
-## KiCad design and Gerbers
-
-Open starbie/starbie.kicad_pro in KiCad. The PCB layout is starbie/starbie.kicad_pcb and the schematic is starbie/starbie.kicad_sch. The exported manufacturing package is [Gerber-Files.zip](Gerber-Files.zip); it contains copper, solder-mask, silkscreen, paste, board-outline Gerbers, drill files, drill maps, and the Gerber job file.
-
-### Check before fabrication
-
-The Gerber package was exported from the repository's current PCB using KiCad CLI 10.0.7. A fresh DRC reported 28 violations, including 8 schematic-to-board footprint/pin parity errors; it reported no unconnected pads. It also reported silkscreen/library warnings. In particular, U2's schematic value is XIAO-ESP32-C3-SMD while its assigned board footprint library ID is XIAO-ESP32-C6-DIP. Verify the actual module, its footprint, and schematic/PCB parity, then rerun DRC before ordering boards. These exports reproduce the current design; they are not a claim that the board is fabrication-ready.
 
 ## Repository layout
 
