@@ -1,19 +1,22 @@
 {
-  "name": "KiCad Development Environment",
+  "name": "KiCad + Arduino Development Environment",
   "image": "mcr.microsoft.com/devcontainers/base:ubuntu-22.04",
   "features": {
     "ghcr.io/devcontainers/features/desktop-lite:1": {}
   },
-  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y software-properties-common && sudo add-apt-repository -y ppa:kicad/kicad-10.0-releases && sudo apt-get update && sudo apt-get install -y kicad kicad-libraries kicad-symbols kicad-footprints kicad-packages3d kicad-templates && bash install-arduino.sh",
+  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y software-properties-common && sudo add-apt-repository -y ppa:kicad/kicad-10.0-releases && sudo apt-get update && sudo apt-get install -y kicad kicad-libraries kicad-symbols kicad-footprints kicad-packages3d kicad-templates && sudo curl -fsSL -o /opt/arduino-ide.AppImage https://downloads.arduino.cc/arduino-ide/arduino-ide_2.3.10_Linux_64bit.AppImage && sudo chmod +x /opt/arduino-ide.AppImage && cd /opt && sudo /opt/arduino-ide.AppImage --appimage-extract && sudo mv /opt/squashfs-root /opt/arduino-ide && sudo ln -sf /opt/arduino-ide/arduino-ide /usr/local/bin/arduino-ide",
   "customizations": {
     "vscode": {
-      "extensions": ["danielmeza/kicad-syntax-vscode"]
+      "extensions": [
+        "danielmeza/kicad-syntax-vscode",
+        "vscode.arduino"
+      ]
     }
   },
   "forwardPorts": [6080],
   "portsAttributes": {
     "6080": {
-      "label": "KiCad Desktop GUI",
+      "label": "Desktop GUI (KiCad / Arduino IDE)",
       "onAutoForward": "openBrowser"
     }
   }
